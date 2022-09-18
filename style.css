@@ -1,0 +1,499 @@
+*{
+  margin: 0;
+  padding: 0; 
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Rubik', sans-serif;
+}
+
+@media only screen and (max-width:900px) {
+  main{
+    max-width: 600px;
+    margin: 0 auto;
+    background: hsl(270, 20%, 96%);
+    position: relative;
+    overflow: hidden;
+  }
+  .top{
+    z-index: 0;
+    background-image: linear-gradient( hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    width: min(50%, 300px);
+    height: min(100vh, 600px);
+    border-bottom-right-radius: 300px;
+    position: absolute;
+    top: -15%;
+    left: 0;
+  }
+  .bottom{
+    z-index: 0;
+    background: linear-gradient(hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+    width: min(50%, 300px);
+    height: min(100vh, 600px);
+    border-top-left-radius: 300px;
+    position: absolute;
+    right: 0;
+    bottom: -15%;
+    opacity: 5%;
+  }
+  .content{
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 3em 0;
+  }
+  .iphonex{
+    width: 270px;
+    height: 495px;
+    border: 8px solid white;
+    border-radius: 30px;
+    position: relative;
+    background: hsl(270, 20%, 96%);
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .topapp{
+    width: 100%;
+    height: 13%;
+    position: relative;
+    border-radius: 0 0 5px 5px;
+    background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+  }
+  .topapp .notch{
+    width: 58%;
+    height: 18px;
+    background: white;
+    border-radius: 0 0 15px 15px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .iphonex #menu{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 8px 20px;
+    align-items: center;
+  }
+  #menu .back{
+    display: block;
+    background: transparent;
+    width: 10px;
+    height: 10px;
+    border-width: 0 0 3px 3px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 3px;
+    margin-right: 5px;
+    transform: rotate(45deg);
+  }
+  #menu img{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    box-shadow: 0 0 4px 2px hsl(293, 100%, 63%);
+  }
+  #menu .bio{
+    margin: 0 10px;
+    flex: 40%; 
+  }
+  #menu .bio div:nth-child(1){
+    color: white;
+    font-size: 0.8em;
+    text-shadow: 0px 0px 3px rgb(241, 45, 143);
+    font-weight: 500;
+  }
+  #menu .bio div:nth-child(2){
+    color: hsl(276, 100%, 81%);
+    font-weight: 400;
+    font-size: 0.6em;
+  }
+  #more{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #more .wdot{
+    width: 3px;
+    height: 3px;
+    margin: 1px 0;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 5px rgb(241, 45, 143);
+  }
+  section{
+    padding: 0.8em 0.7em;
+    font-size: 0.53em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  section .lmg{
+    background: hsla(276, 55%, 52%, 10%);
+    padding: 7px;
+    width: 60%;
+    color: hsl(276, 55%, 52%);
+    border-radius: 10px 10px 10px 4px;
+    margin-bottom: 8px;
+  }
+  div.rmg{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+  }
+  div.rmg img{
+    display: block;
+    width: 18%;
+    border-radius: 10px;
+    margin-left: 10px;
+  }
+  p.rmg{
+    align-self: flex-end;
+    border-radius: 10px 10px 4px 10px;
+    padding: 7px;
+    max-width: 60%;
+    color: hsl(271, 15%, 43%);
+    background: white;
+    margin-top: 10px;
+    box-shadow: 0 3px 8px hsl(283, 10%, 86%);
+  }
+  section p.lmg:nth-child(6){
+    margin-top: 10px;
+  }
+  section .srmg{
+    background-image: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    padding: 8px 16px 8px 8px;
+    border-radius: 10px 10px 10px 4px;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: white;
+  }
+  .srmg .l{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    opacity: 90%;
+  }
+  .l .ecircle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 10px;
+  }
+  .l + div{
+    font-size: 1.4em;
+    font-weight: 600;
+  }
+  section .input{
+    width: 100%;
+    border-radius: 40px;
+    background: white;
+    color: hsl(206, 6%, 79%);
+    padding: 5px 5px 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section .input div{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: hsl(271, 36%, 24%);
+    position: relative;
+  }
+  .input div::before{
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-width: 3px 3px 0 0;
+    border-color: white;
+    border-style: solid;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 3px;
+    margin-left: -6px;
+    margin-top: -5px;
+    transform: rotate(45deg);
+  }
+  .text{
+    width: 100%;
+    text-align: center;
+  }
+  .text h1{
+    margin-top: 2em;
+    margin-bottom: 1em;
+    color: hsl(271, 36%, 24%);
+    font-weight: 500;
+  }
+  .text p{
+    padding: 0 2em;
+    color: hsl(270, 7%, 64%);
+    line-height: 1.6em;
+  }  
+}
+
+
+
+@media only screen and (min-width:900px) {
+  body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  main{
+    width: min(100vw, 1440px);
+    height: min(100vh, 900px);
+    background: hsl(270, 20%, 96%);
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+  }
+  .top{
+    z-index: 0;
+    background-image: linear-gradient( hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    width: 27%;
+    height: 100%;
+    border-radius: 0 0 220px 150px;
+    margin-left: -50px;
+    margin-top: -15vh;
+  }
+  .bottom{
+    z-index: 0;
+    background-image: linear-gradient( hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    opacity: 2%;
+    width: 27%;
+    height: 100%;
+    border-radius: 200px 200px 0 0;
+    position: absolute;
+    right: 0;
+    margin-right: -50px;
+    margin-top: 15vh;    
+  }
+  .content{
+    z-index: 1;
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    display: flex;
+    justify-content: space-evenly;
+  }
+  .iphonex{
+    width: 280px;
+    height: 495px;
+    border: 8px solid white;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    background: hsl(270, 20%, 96%);
+  }
+  .topapp{
+    width: 100%;
+    height: 13%;
+    position: relative;
+    border-radius: 0 0 5px 5px;
+    background-image: linear-gradient(to right, hsl(264, 100%, 61%), hsl(293, 100%, 63%));
+  }
+  .topapp .notch{
+    width: 58%;
+    height: 18px;
+    background: white;
+    border-radius: 0 0 15px 15px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+  .iphonex #menu{
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 8px 20px;
+    align-items: center;
+  }
+  #menu .back{
+    display: block;
+    background: transparent;
+    width: 10px;
+    height: 10px;
+    border-width: 0 0 3px 3px;
+    border-style: solid;
+    border-color: white;
+    border-radius: 3px;
+    margin-right: 5px;
+    transform: rotate(45deg);
+  }
+  #menu img{
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid white;
+    box-shadow: 0 0 4px 2px hsl(293, 100%, 63%);
+  }
+  #menu .bio{
+    margin: 0 10px;
+    flex: 40%; 
+  }
+  #menu .bio div:nth-child(1){
+    color: white;
+    font-size: 0.8em;
+    text-shadow: 0px 0px 3px rgb(241, 45, 143);
+    font-weight: 500;
+  }
+  #menu .bio div:nth-child(2){
+    color: hsl(276, 100%, 81%);
+    font-weight: 400;
+    font-size: 0.6em;
+  }
+  #more{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #more .wdot{
+    width: 3px;
+    height: 3px;
+    margin: 1px 0;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 0 5px rgb(241, 45, 143);
+  }
+  section{
+    padding: 0.8em 0.7em;
+    font-size: 0.53em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  section .lmg{
+    background: hsla(276, 55%, 52%, 10%);
+    padding: 7px;
+    width: 60%;
+    color: hsl(276, 55%, 52%);
+    border-radius: 10px 10px 10px 4px;
+    margin-bottom: 8px;
+  }
+  div.rmg{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+  }
+  div.rmg img{
+    display: block;
+    width: 18%;
+    border-radius: 10px;
+    margin-left: 10px;
+  }
+  p.rmg{
+    align-self: flex-end;
+    border-radius: 10px 10px 4px 10px;
+    padding: 7px;
+    max-width: 60%;
+    color: hsl(271, 15%, 43%);
+    background: white;
+    margin-top: 10px;
+    box-shadow: 0 3px 8px hsl(283, 10%, 86%);
+  }
+  section p.lmg:nth-child(6){
+    margin-top: 10px;
+  }
+  section .srmg{
+    background-image: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    padding: 8px 16px 8px 8px;
+    border-radius: 10px 10px 10px 4px;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    color: white;
+  }
+  .srmg .l{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    opacity: 90%;
+  }
+  .l .ecircle{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 10px;
+  }
+  .l + div{
+    font-size: 1.4em;
+    font-weight: 600;
+  }
+  section .input{
+    width: 100%;
+    border-radius: 40px;
+    background: white;
+    color: hsl(206, 6%, 79%);
+    padding: 5px 5px 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  section .input div{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: hsl(271, 36%, 24%);
+    position: relative;
+  }
+  .input div::before{
+    content: "";
+    display: block;
+    width: 7px;
+    height: 7px;
+    border-width: 3px 3px 0 0;
+    border-color: white;
+    border-style: solid;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 3px;
+    margin-left: -6px;
+    margin-top: -5px;
+    transform: rotate(45deg);
+  }
+  
+  .text{
+    width: 43%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .text h1{
+    margin-bottom: 1em;
+    color: hsl(271, 36%, 24%);
+    font-weight: 600;
+  }
+  .text p{
+    color: hsl(270, 7%, 64%);
+    line-height: 1.6em;
+  }
+}
+
